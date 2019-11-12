@@ -1,7 +1,7 @@
-buffet
+buffet-angular
 ======
 
-Static file server with in-memory cache
+Static file server with in-memory cache for Angular (forked version from Carlos Rodriguez's)
 
 Usage
 -----
@@ -79,8 +79,7 @@ strategy firm located in Aptos, CA and Washington, D.C.
 
 ### License: MIT
 
-- Copyright (C) 2014 Carlos Rodriguez (http://s8f.org/)
-- Copyright (C) 2014 Terra Eclipse, Inc. (http://www.terraeclipse.com/)
+- Copyright (C) 2019 SuperDev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
