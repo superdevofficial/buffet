@@ -1,7 +1,7 @@
 {
-  "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
-  "name": "buffet",
-  "description": "Static file server with in-memory cache",
+  "author": "SuperDev",
+  "name": "buffet-angular",
+  "description": "Static file server with in-memory cache for Angular (forked version from Carlos Rodriguez's)",
   "version": "1.0.10",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "bin": "./bin/buffet.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/carlos8f/buffet.git"
+    "url": "git://github.com/superdevofficial/buffet.git"
   },
   "license": "MIT",
   "dependencies": {
