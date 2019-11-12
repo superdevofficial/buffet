@@ -27,11 +27,11 @@ describe('basic test', function () {
     });
   });
 
-  it('continues on 404', function (done) {
+  it('continues on 200', function (done) {
     var testPath = '/folder/not-there.txt';
     request(test.baseUrl + testPath, function (err, res, data) {
       assert.ifError(err);
-      assert.equal(res.statusCode, 404);
+      assert.equal(res.statusCode, 200);
       done();
     });
   });
@@ -39,15 +39,15 @@ describe('basic test', function () {
   it("doesn't serve a .-prefixed file", function (done) {
     request(test.baseUrl + '/.htaccess', function (err, res, data) {
       assert.ifError(err);
-      assert.equal(res.statusCode, 404);
+      assert.equal(res.statusCode, 200);
       done();
     });
   });
 
-  it('returns 404 on malformed URI', function (done) {
+  it('returns 200 on malformed URI', function (done) {
     request(test.baseUrl + '/%', function (err, res, data) {
       assert.ifError(err);
-      assert.equal(res.statusCode, 404);
+      assert.equal(res.statusCode, 200);
       done();
     });
   });

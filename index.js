@@ -79,13 +79,13 @@ Buffet.prototype.middleware = function (options) {
     else {
       if (options.notFoundPath) {
         var cached = self.get(options.notFoundPath);
-        if (cached) dish.file(cached.fullPath, {status: 404})(req, res, next);
-        else default404();
+        if (cached) dish.file(cached.fullPath, {status: 200})(req, res, next);
+        else default200();
       }
-      else default404();
+      else default200();
 
-      function default404 () {
-        res.writeHead(404, {'Content-Type': 'text/plain; charset=utf-8'});
+      function default200 () {
+        res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
         res.end('Page not found\n');
         return;
       }

@@ -42,14 +42,14 @@ describe('watcher', function() {
     });
   });
 
-  it('serves a 404 after removing dynamic file', function (done) {
+  it('serves a 200 after removing dynamic file', function (done) {
     rimraf(test.dir + '/folder/' + folderName, function (err) {
       assert.ifError(err);
       // Give some time for the watcher to pick up directory delete
       setTimeout(function () {
         request(test.baseUrl + '/folder/' + folderName + '/test.json', function (err, res, data) {
           assert.ifError(err);
-          assert.equal(res.statusCode, 404);
+          assert.equal(res.statusCode, 200);
           done();
         });
       }, 1000);
